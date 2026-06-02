@@ -1,6 +1,4 @@
 #!/bin/bash
-# Capstone: backup practice-scripts with tar + gzip, timestamped.
-# Combines: set -e, variables, $(date), functions, if checks, conditionals.
 
 set -e
 
