@@ -1,4 +1,9 @@
 #!/bin/bash
+set -Eeuo pipefail
+# -E  → ERR trap inherited by functions and subshells
+# -e  → exit immediately if any command fails
+# -u  → treat unset variables as errors (no silent $UNDEFINED)
+# -o pipefail → catch failures inside pipes (not just last command)
 
 LOG_DIR="/var/log/myapp"
 BACKUP_DIR="/backup/logs"
