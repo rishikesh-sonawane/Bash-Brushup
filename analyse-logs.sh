@@ -1,5 +1,6 @@
 #!/bin/bash
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+set -euo pipefail #Prevents a script from executing further commands if an earlier step fails.
 
 
 Error_Patterns=("ERROR" "FATAL" "CRITICAL" "FAILURE" "EXCEPTION" "TRACEBACK" "PANIC" "ABORT" "SEGFAULT" "ASSERTION" "UNCAUGHT EXCEPTION" "UNHANDLED EXCEPTION" "UNEXPECTED ERROR" "UNEXPECTED FAILURE" "UNEXPECTED EXCEPTION" "UNEXPECTED PANIC" "UNEXPECTED ABORT" "UNEXPECTED SEGFAULT" "UNEXPECTED ASSERTION")
@@ -94,3 +95,4 @@ menu
 # M H D M W - Minute, Hour, Day of Month, Month, Day of Week
 
 # 20 14 * * 1 - /absolute/path/to/your/Code/analyse-logs.sh - every Monday at 2:20 PM 
+# use crontab -e
